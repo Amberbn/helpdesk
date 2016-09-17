@@ -7,9 +7,7 @@ Deploy aplikasi pada Docker.
 
 ## running aplikasi
 
-1. masuk direktori helpdesk
-2. npm install
-3. node helpdesk.js
+node helpdesk.js
 
 ## pull image aplikasi docker
 
