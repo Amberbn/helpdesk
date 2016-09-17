@@ -1,5 +1,7 @@
 # helpdesk
 
+https://github.com/Amberbn/helpdesk
+
 Aplikasi helpdesk dibangun dengan Nodejs dan menggunakan database MongoDB.
 Deploy aplikasi pada Docker.
 
