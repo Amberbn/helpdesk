@@ -1,0 +1,47 @@
+extends Klayout
+script(src='/javascripts/jquery-3.0.0.js')
+    script(type="type='text/javascript'")
+        $('document').ready(function(){
+        $('.flip').click(function(){
+        $('.cari').slideToggle("slow")
+        })
+        })
+block content
+  form(method='post', action='/Klaporan')
+      .form-group
+         label Search tanggal pengajuan
+         input#date.form-control(name='date1', type='text',class='datepicker', placeholder='Tanggal awal')
+         input#date.form-control(name='date2', type='text',class='datepicker', placeholder='Tanggal akhir')
+      input.btn.btn-success(name='submit', type='submit', value='Cari')
+      //button.flip AKU
+      br
+      br
+      br
+  table.table.table-bordered
+      thead
+          tr
+              th Nomor problem
+              //th Nama penjaga
+              th Lab
+              th Kategori
+              th Nama hardware/software
+              th Tanggal kerusakan
+              th Tanggal perbaikan
+              th Problem
+              th Catatan
+              th Rekomendasi
+              th(style='color:red') Status
+      -each docs in lap
+          tbody
+              tr
+                  th #{docs.noticket}
+                  //th #{docs.customer}
+                  th #{docs.namalab}
+                  th #{docs.kategori}
+                  th #{docs.namaproduk}
+                  th #{docs.date}
+                  th #{docs.dateperbaikan}
+                  th #{docs.ticket}
+                  th #{docs.catatan}
+                  th #{docs.rekomendasi}
+                  th #{docs.status}

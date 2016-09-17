@@ -1,0 +1,23 @@
+extends Klayout
+block content
+    h1 Form edit user
+    form(method='post', action='/edit_saveuser')
+        .form-group
+            label Nama user
+            input(type="hidden" name="_id" value="#{user._id}")
+            input.form-control(name='nama', type='text', value='#{user.nama}')
+        .form-group
+            label NIP
+            input.form-control(name='nip' type='text', value='#{user.nip}')
+        .form-group
+            label Password
+            input.form-control(name='password' type='text', value='#{user.password}')
+        .form-group
+            label Level
+            select#lab.combobox.form-control(name='level', type='text')
+                option(value='#{user.level}') #{user.level}
+                option(value='1') 1
+                option(value='2') 2
+                option(value='3') 3
+
+        input.btn.btn-success(name='submit', type='submit', value='Update')

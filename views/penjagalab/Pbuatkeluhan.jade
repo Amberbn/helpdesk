@@ -1,0 +1,45 @@
+extends Playout
+
+block content
+
+  h1 Form pengajuan
+  form(method='post', action='/Psimpankeluhan')
+    .form-group
+      label Nomor problem
+      input.form-control(name='noticket', type='text',value='#{noticket}' placeholder='Masukkan nomor problem', disabled='disabled')
+    .form-group
+      //label Nomor problem
+      input.form-control(name='noticket', type='hidden',value='#{noticket}' placeholder='Masukkan nomor problem',hidden='hidden')
+
+    //.form-group
+    //  label Nomor problem
+      //input.form-control(name='idproblem', type='text',value='#{idproblem}' placeholder='Masukkan nomor problem',disabled='disabled')
+    //.form-group
+      //label Nomor problem
+    //  input.form-control(name='idproblem', type='text',value='#{idproblem}' placeholder='Masukkan nomor problem',hidden='hidden')
+
+    .form-group
+      //label Nama petugas
+      input.form-control(name='customer', type='hidden',value='#{nama}', placeholder='Masukkan nama customer', hidden='hidden')
+    .form-group
+      label Lab
+      select#namalab.combobox.form-control(name='namalab',type='text')
+        option(value='') Silahkan pilh nama lab
+        -each lb in lab
+          option(value='#{lb.namalab}') #{lb.namalab}
+    .form-group
+      label Kategori
+      select#kategori.combobox.form-control(name='kategori', type='text')
+        option(value='') Masukkan pilihan kategori hardware/software
+        -each datakategori in kategori
+          option(value='#{datakategori.namakategori}') #{datakategori.namakategori}
+    .form-group
+      label Nama hardware/software
+      input.form-control(name='namaproduk', type='text', placeholder='Masukkan nama hardware/software')
+    .form-group
+      label Tanggal pengajuan
+      input#date.form-control(name='date', type='text', class='datepicker' , placeholder='Masukkan tanggal pengajuan')
+    .form-group
+      label Problem
+      textarea.form-control(name='ticket', type='text', placeholder='Masukkan request problem', rows='10')
+    input.btn.btn-success(name='submit', type='submit', value='Submit')

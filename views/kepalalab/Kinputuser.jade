@@ -1,0 +1,41 @@
+extends Klayout
+block content
+    h1 Form Input user
+    p Silakan buat user
+    form(method='post', action='/Ksimpanuser')
+        .form-group
+            label Nama user
+            input.form-control(name='nama', type='text', placeholder='Masukkan nama user')
+        .form-group
+            label NIP
+            input.form-control(name='nip' type='text', placeholder='Masukkan username')
+        .form-group
+            label Password
+            input.form-control(name='password' type='text', placeholder='Masukkan password')
+        .form-group
+            label Level
+            select#lab.combobox.form-control(name='level', type='text')
+                option(value='') Pilih level
+                option(value='1') 1
+                option(value='2') 2
+                option(value='3') 3
+
+        input.btn.btn-success(name='submit', type='submit', value='Tambah')
+
+    table.table.table-bordered
+        thead
+            tr
+                th Nama user
+                th NIP
+                th Password
+                th Level
+                th Aksi
+        -each docs in user
+            tbody
+                tr
+                    td #{docs.nama}
+                    td #{docs.nip}
+                    td #{docs.password}
+                    td #{docs.level}
+                    td: a(href='Kedituser/_id=#{docs._id}') Edit &nbsp;|&nbsp;
+                        a(href='hapusUser/_id=#{docs._id}') Hapus

@@ -1,0 +1,26 @@
+extends Playout
+
+block content
+  h1 Daftar pengajuan
+  table.table.table-bordered
+    thead
+      tr
+        th Nomor problem
+        th Nama petugas
+        th Lab
+        th Kategori
+        th Nama hardware/software
+        th Tanggal
+        th Problem
+        th(style='color:red') Status
+    -each doc in ticket
+      tbody
+        tr
+          th #{doc.noticket}
+          th #{doc.customer}
+          th #{doc.namalab}
+          th #{doc.kategori}
+          th #{doc.namaproduk}
+          th #{doc.date}
+          th #{doc.ticket}
+          th #{doc.status}

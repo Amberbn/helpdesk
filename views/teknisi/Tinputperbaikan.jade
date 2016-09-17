@@ -1,0 +1,33 @@
+extends Tlayout
+
+block content
+  h1 Form input hasil perbaikan
+  form(method='post', action='/Tsaveperbaikan')
+    .form-group
+      input(type='text', name='_id', value='#{pticket._id}', hidden='hidden')
+    .form-group
+      label Nama Lab
+      input.form-control(name='namalab', type='text',value='#{pticket.namalab}', disabled='disabled')
+    .form-group
+      label Nama hardware/software
+      input.form-control(name='namaproduk', type='text', value='#{pticket.namaproduk}', disabled='disabled')
+    .form-group
+      label Problem
+      input.form-control(name='ticket', type='text', value='#{pticket.ticket}', disabled='disabled')
+    .form-group
+      label Tanggal perbaikan
+      input.form-control(name='dateperbaikan', class='datepicker', type='text', placeholder="Silahkan masukkan tanggal perbaikan")
+    .form-group
+      label Catatan
+      textarea#catatan.form-control(name='catatan', type='text', rows='10', placeholder='Silahkan masukkan catatan perbaikan')
+    .form-group
+      label.radio-inline
+        input(type='radio', name='status',value='Selesai diperbaiki', checked='checked')
+        | Diperbaiki
+      label.radio-inline
+        input(type='radio', name='status', value='Tidak bisa diperbaiki')
+        | Tidak dapat diperbaiki
+    .form-group
+      label Rekomendasi
+      textarea#rekomendasi.form-control(name='rekomendasi', type='text', rows='10', placeholder='Silahkan masukkan rekomendasi perbaikan')
+    input.btn.btn-success(name='submit', type='submit', value='Kirim')

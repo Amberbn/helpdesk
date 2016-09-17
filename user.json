@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5770edab353dc54b24549ddf"},"nama":"Totok Budioko","nip":981106,"password":"1234","level":1.0}
+{"_id":{"$oid":"5770ee90c4a41b040cba7ee4"},"nama":"Rully Anggoro","nip":12345,"password":"123","level":3,"__v":0}
+{"_id":{"$oid":"57abd3902bd29ba7149026e8"},"nama":"Widiyanto","nip":12346,"password":"123","level":3,"__v":0}
+{"_id":{"$oid":"57abd3ab2bd29ba7149026e9"},"nama":"Marhadi","nip":12347,"password":"123","level":3,"__v":0}
+{"_id":{"$oid":"57abd3e02bd29ba7149026ea"},"nama":"Sutrisna","nip":12348,"password":"123","level":2,"__v":0}
+{"_id":{"$oid":"57abd4072bd29ba7149026eb"},"nama":"Taswanto","nip":12349,"password":"123","level":2,"__v":0}
+{"_id":{"$oid":"57abd4342bd29ba7149026ec"},"nama":"Yatiman","nip":123410,"password":"123","level":2,"__v":0}
+{"_id":{"$oid":"57abd46c2bd29ba7149026ed"},"nama":"Hermanto","nip":123411,"password":"123","level":2,"__v":0}
+{"_id":{"$oid":"57abd48b2bd29ba7149026ee"},"nama":"Victor","nip":123412,"password":"123","level":2,"__v":0}
+{"_id":{"$oid":"57abd4a92bd29ba7149026ef"},"nama":"Rita","nip":123413,"password":"123","level":2,"__v":0}
+{"_id":{"$oid":"57abd4b92bd29ba7149026f0"},"nama":"Darundia","nip":123414,"password":"123","level":2,"__v":0}

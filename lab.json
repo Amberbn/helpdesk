@@ -1,0 +1,10 @@
+{"_id":{"$oid":"57abd6a93d5bbc791fe45e01"},"idlab":"1A","namalab":"Multimedia"}
+{"_id":{"$oid":"57abd6f03d5bbc791fe45e02"},"idlab":"1B","namalab":"Jarkom"}
+{"_id":{"$oid":"57abd7123d5bbc791fe45e03"},"idlab":"1C","namalab":"Basisdata"}
+{"_id":{"$oid":"57abd73f3d5bbc791fe45e04"},"idlab":"2A","namalab":"Aplikasi"}
+{"_id":{"$oid":"57abd7803d5bbc791fe45e05"},"idlab":"2B","namalab":"Rangakaian Listrik"}
+{"_id":{"$oid":"57abd79f3d5bbc791fe45e06"},"idlab":"2C","namalab":"Periperal"}
+{"_id":{"$oid":"57abd7cf3d5bbc791fe45e07"},"idlab":"3A","namalab":"Cloud Computing"}
+{"_id":{"$oid":"57abd7fc3d5bbc791fe45e08"},"idlab":"3B","namalab":"Akuntansi"}
+{"_id":{"$oid":"57abd8353d5bbc791fe45e09"},"idlab":"3C","namalab":"Pemrograman"}
+{"_id":{"$oid":"57abd8543d5bbc791fe45e0a"},"idlab":"3D","namalab":"Komdas"}

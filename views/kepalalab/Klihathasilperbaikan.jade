@@ -1,0 +1,31 @@
+extends Klayout
+block content
+  h1 Lihat Perbaikan
+  table.table.table-bordered
+      thead
+        tr
+          th Nomor problem
+          //th Teknisi
+          th Lab
+          th Kategori
+          th Nama hardware/software
+          th Tanggal kerusakan
+          th Tanggal perbaikan
+          th Problem
+          th Catatan
+          th Rekomendasi
+          th(style='color:red') Status
+      -each docs in perbaikan_ticket
+          tbody
+              tr
+                th #{docs.noticket}
+                //th #{docs.teknisi}
+                th #{docs.namalab}
+                th #{docs.kategori}
+                th #{docs.namaproduk}
+                th #{docs.date}
+                th #{docs.dateperbaikan}
+                th #{docs.ticket}
+                th #{docs.catatan}
+                th #{docs.rekomendasi}
+                th #{docs.status}

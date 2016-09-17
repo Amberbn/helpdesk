@@ -1,0 +1,33 @@
+extends Klayout
+block content
+
+  h3 Laporan Hasil Pengajuan
+
+  table.table.table-bordered
+      thead
+          tr
+              th Nomor problem
+              //th Nama penjaga
+              th Lab
+              th Kategori
+              th Nama hardware/software
+              th Tanggal kerusakan
+              th Tanggal perbaikan
+              th Problem
+              th Catatan
+              th Rekomendasi
+              th(style='color:red') Status
+      -each docs in lap
+          tbody
+              tr
+                  th #{docs.noticket}
+                  //th #{docs.customer}
+                  th #{docs.namalab}
+                  th #{docs.kategori}
+                  th #{docs.namaproduk}
+                  th #{docs.date}
+                  th #{docs.dateperbaikan}
+                  th #{docs.ticket}
+                  th #{docs.catatan}
+                  th #{docs.rekomendasi}
+                  th #{docs.status}

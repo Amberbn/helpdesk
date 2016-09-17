@@ -1,0 +1,35 @@
+extends Klayout
+
+block content
+
+  h1 Form Keluhan/Ticket
+  p Silakan buat keluhan/ticket
+  form(method='post', action='/Ksaveticket')
+    .form-group
+      label Nomor Ticket/Keluhan
+      input.form-control(name='noticket', type='text', placeholder='Masukkan Nomor Ticket/Keluhan')
+    .form-group
+      label Customer
+      input.form-control(name='customer' type='text', placeholder='Masukkan nama anda')
+    .form-group
+      label Nama Lab
+      select#lab.combobox.form-control(name='lab', type='text')
+        option(value='') lab
+        -each item in lab
+          option(value='#{item.namalab}') #{item.namalab}
+    .form-group
+      label Kategori
+      select#lab.combobox.form-control(name='lab', type='text')
+        option(value='') Kategori
+        -each kat in kategori
+          option(value='#{kat.namakategori}') #{kat.namakategori}
+    .form-group
+      label Nama Produk
+      input.form-control(name='produk' type='text', placeholder='Masukkan nama produk')
+    .form-group
+      label Tanggal
+      input.form-control(name='date' type='text', placeholder='Masukkan Tanggal request')
+    .form-group
+      label Ticket/Keluhan
+      textarea#ticket.form-control(name='ticket', type='text', rows='10', placeholder='Silahkan masukkan ticket/keluhan')
+  input.btn.btn-success(name='submit', type='submit', value='Kirim')

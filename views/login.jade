@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Login
+  form(method='post', action='/login')
+    .form-group
+      label Username
+      input.form-control(name='nip', type='text', placeholder='Masukkan username')
+    .form-group
+      label Password
+      input.form-control(name='password', type='password', placeholder='Masukkan password')
+    input.btn.btn-success(name='submit', type='submit', value='Login')

@@ -1,0 +1,29 @@
+extends Klayout
+
+block content
+  h1 Daftar pengajuan
+  h1=message
+  table.table.table-bordered
+    thead
+      tr
+        th Nomor problem
+        th Nama petugas
+        th Lab
+        th Kategori
+        th Nama hardware/software
+        th Tanggal
+        th Problem
+        th(style='color:red') Status
+        th Aksi
+    -each docs in ticket
+      tbody
+        tr
+          td #{docs.noticket}
+          td #{docs.customer}
+          td #{docs.namalab}
+          td #{docs.kategori}
+          td #{docs.namaproduk}
+          td #{docs.date}
+          td #{docs.ticket}
+          td #{docs.status}
+          td: a(href='/approveticket/_id=#{docs._id}') Setujui

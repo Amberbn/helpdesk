@@ -1,0 +1,28 @@
+extends Tlayout
+
+block content
+  h1 Daftar pengajuan
+  table.table.table-bordered
+    thead
+      tr
+        th Nomor problem
+        th Nama petugas
+        th Lab
+        th Kategori
+        th Nama hardware/software
+        th Tanggal
+        th Problem
+        th(style='color:red') Status
+        th Action
+    -each item in ticket
+      tbody
+        tr
+          td #{item.noticket}
+          td #{item.customer}
+          td #{item.namalab}
+          td #{item.kategori}
+          td #{item.namaproduk}
+          td #{item.date}
+          td #{item.ticket}
+          td #{item.status}
+          td: a(href='/Tinputperbaikan/_id=#{item._id}') Perbaiki

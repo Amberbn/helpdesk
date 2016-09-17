@@ -1,0 +1,15 @@
+extends Klayout
+block content
+    h1 Form pilih teknisi
+
+    form(method='post', action='/approveticket')
+        .form-group
+            input(type='hidden' name='_id' value='#{tck._id}')
+            input(type='text' disabled='disabled' name='_id' value='#{tck._id}')
+            br
+            label Pilih Tenaga Teknisi
+            select#lab.combobox.form-control(name='nip', type='text')
+              - each teknisi in dttk
+                  option(value='#{teknisi.nip}') #{teknisi.nama}
+
+        input.btn.btn-success(name='submit', type='submit', value='Approve')
